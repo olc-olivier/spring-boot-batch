@@ -1,0 +1,30 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ochantereau
+      changes:
+        - createTable:
+            tableName: personne
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: nom
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: prenom
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: civilite
+                  type: varchar(10)
+                  constraints:
+                    nullable: false
